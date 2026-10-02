@@ -1,0 +1,16 @@
+1. Gawrawa - list, loops
+2. Nirmal - arithmatic
+3. Minduli - conditions
+4. Menura - list
+5. Deneth - arithmatic ops, variables
+6. Vihanga - loops ,
+7. Buddhika - functions  & function scopes
+8. Puleesha - conditions & logical operators
+9. Dilruk - loops & lists
+10. Malith -
+11. Kavishka -
+12. Bhanuka -
+13. Adeesa
+14. Dulendra
+15. rev. subhuthi
+
