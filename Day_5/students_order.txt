@@ -7,10 +7,11 @@
 7. Buddhika - functions  & function scopes
 8. Puleesha - conditions & logical operators
 9. Dilruk - loops & lists
-10. Malith -
-11. Kavishka -
-12. Bhanuka -
+10. Malith - function & scopes
+11. Kavishka - Loops & conditions
+12. Bhanuka - Dictionaries & Tuples
 13. Adeesa
 14. Dulendra
 15. rev. subhuthi
+16.
 

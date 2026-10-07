@@ -3,7 +3,7 @@ username = "test"
 
 username_input = input("Enter your username")
 
-if username == username_input:
+if username == username_input: #True or False
     print("Congrats your username matches!")
     password_input = input("Enter your password : ")
     if password == password_input:
