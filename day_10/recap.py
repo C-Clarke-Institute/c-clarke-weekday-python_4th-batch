@@ -78,8 +78,6 @@ def add() : # function without arguments
     print(x + y)
 
 
-add()
-
 def add_wit_args(x, y):
     print(x + y)
 
@@ -88,6 +86,19 @@ val2  = int(input( "Enter Value 2 : "))
 
 add_wit_args(x=val2, y=val1) #keyword arguments
 add_wit_args(val1,val2) #positianal arguments
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -1,4 +1,5 @@
 # get avarge score from 4 subjects
+from day_11.input_validators.input_util import get_integer
 
 # to qualified for scolarsip he must have average above 75, attandance above 75 and
 # income less than 10000 or special achivements
@@ -10,8 +11,8 @@
 
 
 math = int(input("Enter Maths Marks : "))
-science = int(input("Enter science Marks : "))
-ICT = int(input("Enter ICT Marks : "))
+science = get_integer("Enter Science Marks : ")
+ICT = get_integer("Enter ICT marks : ")
 english = int(input("Enter english Marks : "))
 
 avg = (math + science + ICT + english)/4
