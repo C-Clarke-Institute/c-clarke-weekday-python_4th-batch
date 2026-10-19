@@ -1,0 +1,59 @@
+You need to develop a Inventory Managment system for a auto mobile shop.
+you are required to develop a Car dealership management system,
+it need to organized into a python package named car_dealership,
+containing modules for inventory management and customer management.
+
+main file must provide a menu driven interface for users to intract with the system
+outside of the package
+(later you can add another package f
+
+vehicle inventory management -
+
+develop a inventory management moddule that allow -
+- view all available vehicle with their relevant details
+- add new veehicles to the inventory
+- search for vehicle by name
+- search for vehicles by manufacturer or model
+- find vehicles within the specified price range or below a given maximum price
+- display appropriate messages when no matching vehicles cannot be found,
+
+each vehicle should contain relevent information
+including id, name, manufacture year, model, country of origin , price
+
+-----------------------------------
+customer management
+
+customer management must allow users to -
+- register new customers with their details
+(customer id, name, contact number, purchase history)
+- search for customer using  their unqiue id
+- view customer information
+- maintain a record of vehicles purchased by each customers
+- associate vehicle purchase with the relevant customer
+- display appropriate messages when no matching customer cannot be found,
+
+===================================
+Vehicle Purchase Process
+================================
+
+implement a feature that allows customer to select and purchase a vehicle
+- display available vehicle before selection
+- identify registered selected vehicle and customer making the purchase
+- Record the purchase in the customer's purchase history
+- Ensure that  the inventory and customer records remin consistent
+after a successful purchase
+- Handle invalid customer IDs,  vehicle selections, and other unexpected inputs
+
+===================================
+Menu driven system
+================================
+ create a menu driven main program that provides acces to the system features
+ the interface should allow useres to select required operation, perform it andd
+ return to the main menu without restarting the program
+ program should continue until user chose to exit
+
+*** Use suitable python data structures to store and
+manage vehicle inventory, customer details, and purchase records
+
+
+

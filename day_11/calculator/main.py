@@ -1,4 +1,4 @@
-import calculator
+import calculator as cal
 
 
-print(calculator.calculate_circle_area(20))
+print(cal.calculate_circle_area(20))
