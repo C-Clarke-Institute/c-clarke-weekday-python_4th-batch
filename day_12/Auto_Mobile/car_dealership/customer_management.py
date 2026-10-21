@@ -29,6 +29,7 @@ def add_customer(customer):
     print("Customer added Successfully")
 
 def get_customer_by_id(customer_id) :
+    #get the customer from the customer list
 
     for cust in customer_details:
         if cust["cust_id"] == customer_id:
@@ -43,7 +44,7 @@ def add_customer_order(cust_id, car_info) :
             if cust["cust_id"] == cust_id:
                 cust["purchases"].append(car_info)
 
-def view_customer(customer_id) :
+def view_customer(customer_id) : #display the customer
      customer = get_customer_by_id(customer_id)
 
      if customer is None:
