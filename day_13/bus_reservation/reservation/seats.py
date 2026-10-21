@@ -1,4 +1,4 @@
-from bookings import get_bookings, seat_numbers, title
+from day_13.bus_reservation.reservation.bookings import title, get_bookings, seat_numbers
 from day_13.bus_reservation.reservation.routes import display_route
 
 
@@ -31,12 +31,12 @@ def display_seats():
             print()
 
     print("\n[X] - Booked     [ ] - Available")
-#
-# def show_routes_and_seats():
-#     """Display route information and the seat map"""
-#
-#     display_route()
-#     display_seats()
+
+def show_routes_and_seats():
+    """Display route information and the seat map"""
+
+    display_route()
+    display_seats()
 
 
 
