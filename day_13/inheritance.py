@@ -28,5 +28,6 @@ class Dog(Mammal):
 
  
 
+dog = Dog(color="brown", breed="Shephard", is_domesticated=False)
 dog.drinking_milk()
 dog.eat()
