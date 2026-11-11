@@ -113,7 +113,7 @@ class InMemoryOrderRepository(OrderRepository):
         self.__orders[order.order_id] = order
 
     def get_by_id(self, order_id: str) -> Optional[Order]:
-        self.__orders.get(order_id)
+        return self.__orders.get(order_id)
 
     def list_all_orders(self) -> List[Order]:
         return list(self.__orders.values())

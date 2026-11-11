@@ -63,7 +63,7 @@ def add_a_order():
 
          order = supermarket_service.add_order(order_id, cust_id)
          print(f"Order {order.order_id} created for {order.customer_id}")
-         add_item_to_order(order.order_id)
+         add_item_to_order(order_id)
 
      except SuperMarketError as e:
          print(e)
@@ -88,7 +88,7 @@ def add_item_to_order(order_id):
         try :
             quantity = float(input("Enter Quantity : "))
             supermarket_service.add_item_to_order(order_id,product_id,quantity)
-            print("item addded to order.")
+            print("item added to order.")
 
         except ValueError:
             print("Quantity must be a number .")
