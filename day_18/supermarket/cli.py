@@ -1,11 +1,11 @@
 from day_18.supermarket.models import SuperMarketError
 from day_18.supermarket.repositories import InMemoryProductRepository, InMemoryCustomerRepository, \
-    InMemoryOrderRepository
+    InMemoryOrderRepository, FileBasedProductRepository
 from day_18.supermarket.service import SuperMarketService
 
 
 supermarket_service = SuperMarketService(
-    InMemoryProductRepository(),
+    FileBasedProductRepository(),
     InMemoryCustomerRepository(),
     InMemoryOrderRepository()
 )
