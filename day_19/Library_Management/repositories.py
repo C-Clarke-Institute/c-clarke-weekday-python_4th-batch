@@ -1,6 +1,7 @@
 from abc import ABC, abstractmethod
+from datetime import datetime
 
-from day_19.Library_Management.models import Book, Member
+from day_19.Library_Management.models import Book, Member, Loan
 
 
 class BookRepository(ABC):
@@ -136,7 +137,119 @@ class FileBasedMemberRepository :
     def save(self):
 
         with open(self.file_path, "w") as file :
-            for
+            for member in self.members.values():
+
+                line = f"{member.member_id}|{member.name}|{member.contact}"
+
+                file.write(line)
+
+    def add(self,member):
+
+        if member.member_id in self.members:
+            raise ValueError("Member ID already exists.")
+
+        self.members[member.member_id] = member
+
+        self.save()
+
+    def get_by_id(self,member_id):
+        return self.members.get(member_id)
+
+
+    def get_all(self):
+        return list(self.members.values())
+
+
+    def update_member(self,member):
+
+        if member.member_id not in self.members:
+            raise ValueError("Member not found.")
+
+        self.members[member.member_id] = member
+
+        self.save()
+
+
+class LoanRepository:
+
+    def __init__(self, file_path):
+        self.file_path = file_path
+        self.loans = {}
+
+    def load(self):
+
+        self.loans = {}
+
+        try:
+
+            with open(self.file_path, "r") as file :
+
+                for line_number, line in enumerate(file,start=1):
+                    line = line.strip()
+
+                    if not line:
+                        continue
+
+                    data = line.split("|")
+
+                    if len(data) != 5:
+                        raise ValueError(f"Invalid loan record at line {line_number}")
+
+                    loan = Loan(loan_id=data[0],
+                                member_id=data[1],
+                                book_id=data[2],
+                                borrowed_at=datetime.strptime(data[3],"%Y-%m-%d %H:%M:%S"),
+                                returned_at=
+                                None if data[4] == "None" else
+                                datetime.strptime(data[4],"%Y-%m-%d %H:%M:%S"))
+
+                    self.loans[loan.loan_id] = loan
+
+        except FileNotFoundError:
+            self.loans = {}
+
+
+    def save(self):
+
+        with open(self.file_path, "w") as file :
+
+            for loan in self.loans.values():
+
+                line = (f"{loan.loan_id}|{loan.member_id}|{loan.book_id}|"
+                        f"{loan.borrowed_at.isoformat()}|"
+                        f"{loan.returned_at.isoformat() if loan.returned_at is not None 
+                        else "None"}\n")
+
+                file.write(line)
+
+    def add(self,loan):
+
+        if loan.loan_id in self.loans:
+            raise ValueError("Loan ID already exists")
+
+        self.loans[loan.loan_id] = loan
+
+        self.save()
+
+    def get_by_id(self,loan_id):
+        return self.loans.get(loan_id)
+
+    def get_all(self):
+        return list(self.loans.values())
+
+    def update(self,loan):
+
+        if loan.loan_id not in self.loans:
+            raise ValueError("Loan not found")
+
+        self.loans[loan.loan_id] = loan
+
+        self.save()
+
+    def get_only_active_loans(self):
+        return [loan for loan in self.loans.values if loan.is_active()]
+
+
 
 
 

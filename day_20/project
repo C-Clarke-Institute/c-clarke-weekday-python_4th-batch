@@ -1,0 +1,11 @@
+student attributes - f name, l_name,address, NIC, nationality,academic_year,
+student_id (auto generaed str)
+
+student has 3 methods to  get gender from nic, get birthday from nic, get age
+
+cli -
+
+- add student , get age, get gender, get birthday, view all students data,
+analytics
+
+file based
